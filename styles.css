@@ -1,0 +1,19 @@
+
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a//dev/null b/styles.css
+index 0000000000000000000000000000000000000000..9e4e38bf1229d04b5ff3f51cfeea4ec98554a352 100644
+--- a//dev/null
++++ b/styles.css
+@@ -0,0 +1,9 @@
++body {
++  font-family: Arial, sans-serif;
++  margin: 0;
++  padding: 0;
++}
++
++h1 {
++  color: #333;
++}
+ 
+EOF
+)
